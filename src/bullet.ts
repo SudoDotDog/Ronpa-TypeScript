@@ -206,6 +206,8 @@ export class Bullet<T extends RECORD_TYPE = RECORD_TYPE.TEXT> {
     private _editHistories?: Array<EditHistory<T>>;
     private _reply?: string;
 
+    private _readBy?: string[];
+
     private _isRobot?: boolean;
     private _isGenerated?: boolean;
 
@@ -265,6 +267,15 @@ export class Bullet<T extends RECORD_TYPE = RECORD_TYPE.TEXT> {
     }
     public get editHistories(): Array<EditHistory<T>> {
         return this._editHistories || [];
+    }
+
+    public isReadBy(by: string): boolean {
+
+        if (!Array.isArray(this._readBy)) {
+            return false;
+        }
+
+        return this._readBy.includes(by);
     }
 
     public editContent(newContent: ContentType<T>, by: string, at?: Date): this {
