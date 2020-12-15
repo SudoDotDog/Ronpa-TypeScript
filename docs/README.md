@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/ronpa)](https://www.npmjs.com/package/ronpa)
 
 :speech_balloon: Comments Management for TypeScript
+
+## Install
+
+```sh
+yarn add ronpa
+# Or
+npm install ronpa --save
+```
