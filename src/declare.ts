@@ -83,6 +83,8 @@ export type FlatRecord<T extends RECORD_TYPE = RECORD_TYPE.TEXT> = {
     readonly editHistories?: Array<EditHistory<T>>;
     readonly reply?: string;
 
+    readonly readBy?: string[];
+
     readonly isRobot?: boolean;
     readonly isGenerated?: boolean;
 

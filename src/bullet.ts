@@ -434,6 +434,9 @@ export class Bullet<T extends RECORD_TYPE = RECORD_TYPE.TEXT> {
         if (this._extras) {
             record.extras = this._extras;
         }
+        if (this._readBy) {
+            record.readBy = this._readBy;
+        }
         if (this._isRobot) {
             record.isRobot = this._isRobot;
         }
