@@ -229,6 +229,8 @@ export class Bullet<T extends RECORD_TYPE = RECORD_TYPE.TEXT> {
         this._isRobot = record.isRobot;
         this._isGenerated = record.isGenerated;
 
+        this._readBy = record.readBy;
+
         this._extras = record.extras;
     }
 
